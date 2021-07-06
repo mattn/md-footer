@@ -8,26 +8,6 @@ import (
 	"os"
 )
 
-type stack []string
-
-func (s *stack) push(i string) {
-	*s = append(*s, i)
-}
-
-func (s *stack) empty() bool {
-	return len(*s) == 0
-}
-
-func (s *stack) pop() string {
-	r := (*s)[len(*s)-1]
-	*s = (*s)[:len(*s)-1]
-	return r
-}
-
-func (s *stack) last() string {
-	return (*s)[len(*s)-1]
-}
-
 func convert(r io.Reader, w io.Writer) error {
 	in := bufio.NewReader(r)
 	out := bufio.NewWriter(w)
