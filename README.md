@@ -1,9 +1,11 @@
 # md-footer
 
-[グーグル](https://www.google.com)、[ツイッター](https://twitter.com)
+Go port of https://github.com/sayanarijit/md-footer
 
 ## License
 
-[フェイスブック](https://facebook.com)
+MIT
 
 ## Author
+
+Yasuhiro Matsumoto (a.k.a. mattn)
