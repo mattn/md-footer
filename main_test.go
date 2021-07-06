@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"sort"
 	"testing"
 )
 
@@ -13,8 +14,10 @@ func TestSimple(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	sort.Strings(files)
 
 	for _, file := range files {
+		t.Log(file)
 		f, err := os.Open(file)
 		if err != nil {
 			t.Fatal(err)

@@ -32,7 +32,7 @@ func convert(r io.Reader, w io.Writer) error {
 		} else if c == '`' && !isCodeBlock {
 			isCodeBlock = true
 			out.WriteRune(c)
-		} else if c == '[' && !isCodeBlock {
+		} else if c == '[' && !isCodeBlock && !isHyperLink {
 			out.WriteRune(c)
 		} else if c == '(' && last == ']' && !isCodeBlock {
 			hyperLink = ""
